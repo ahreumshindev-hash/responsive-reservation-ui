@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# responsive-reservation-ui
+
+A responsive table reservation web application built with React and CSS Grid.
+
+## Features
+- Responsive column layout (CSS Grid)
+- Mobile-first design
+- Reusable layout components
+- Form structure for reservations
+
+## Tech Stack
+- React
+- CSS Grid
+- Flexbox
+- Responsive Design
+>>>>>>> d3ee3a938d8684ac99bca4ec9c4fb3b222661ee5
