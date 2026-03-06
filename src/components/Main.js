@@ -1,9 +1,14 @@
+/* global fetchAPI , submitAPI */
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Homepage from "./Homepage";
 import BookingPage from "./BookingPage";
 import Chicago from "./Chicago";
 import Specials from "./Specials";
+import ComfirmedBooking from "./ComfirmedBooking";
+
+import './Main.css';
+import { useReducer } from "react";
 
 function Placeholder({ title }) {
   return (
@@ -16,13 +21,37 @@ function Placeholder({ title }) {
   );
 }
 
+export function updateTimes(state, action) {
+  if (action.type === "dateChanged") {
+    return fetchAPI(new Date(action.date));
+  }
+  return state;
+}
+
+export function initializeTimes() {
+  const today = new Date();
+  return fetchAPI(today)
+}
+
 function Main() {
+  const navigate = useNavigate();
+
+  const [availableTimes , dispatch ] =useReducer(updateTimes, [] , initializeTimes)
+
+  function submitForm(formData) {
+    const success = submitAPI(formData);
+    if (success) {
+      navigate("/confirmed");
+    }
+  }
+
   return (
     <main>
         <div className='container'>
             <Routes >
                 <Route path="/" element={<Homepage />} />
-                <Route path="/reservations" element={<BookingPage />} />
+                <Route path="/reservations" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm}/>} />
+                <Route path="/confirmed" element={<ComfirmedBooking />} />
                 <Route path="/about" element={<Chicago />} />
                 <Route path="/menu" element={<Specials/>} />
                 <Route path="/order" element={<Placeholder title="Order Online" />} />
