@@ -1,9 +1,9 @@
 import aboutImg from "../assets/restaurant.jpg";
 
-function Chicago() {
+export default function Chicago() {
   return (
     <section className="section">
-      <div className="container about-grid">
+      <div className="container two-grid">
         <div>
           <h2>Little Lemon</h2>
           <h3>Chicago</h3>
@@ -20,5 +20,3 @@ function Chicago() {
     </section>
   );
 }
-
-export default Chicago;

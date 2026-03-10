@@ -311,7 +311,7 @@ button, .btn{
 }
 }
 
-.about-grid{
+.two-grid{
   display:grid;
   gap:24px;
   grid-template-columns: 1fr;
@@ -319,7 +319,7 @@ button, .btn{
 }
 
 @media (min-width: 768px){
-  .about-grid{ grid-template-columns: 1fr 1fr; }
+  .two-grid{ grid-template-columns: 1fr 1fr; }
 }
 
 .footer{

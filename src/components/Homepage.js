@@ -3,7 +3,7 @@ import Chicago from './Chicago';
 import CustomersSay from './CustomersSay';
 import Specials from './Specials';
 
-function Homepage() {
+export default function Homepage() {
   return (
     <>
         <CallToAction/>
@@ -13,5 +13,3 @@ function Homepage() {
     </>
   );
 }
-
-export default Homepage;

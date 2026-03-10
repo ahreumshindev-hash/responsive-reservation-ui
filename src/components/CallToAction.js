@@ -1,6 +1,6 @@
 import Restaurant from '../assets/restaurant.jpg'
 
-function CallToAction() {
+export default function CallToAction() {
   return (
         <section className="section hero">
         <div className="hero-grid">
@@ -21,5 +21,3 @@ function CallToAction() {
       </section>
   );
 }
-
-export default CallToAction;

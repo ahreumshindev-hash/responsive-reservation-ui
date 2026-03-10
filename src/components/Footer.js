@@ -1,15 +1,13 @@
 import logo from '../assets/Logo.svg'
 
-function Footer() {
+export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-grid">
-        {/* 1열: 브랜드/로고(또는 이미지) */}
         <div className="footer-brand">
           <img className="footer-logo" src={logo} alt="Little Lemon logo" />
         </div>
 
-        {/* 2열: Doormat */}
         <nav className="footer-nav" aria-label="Footer navigation">
           <h3 className="footer-title">Doormat Navigation</h3>
           <ul className="footer-list">
@@ -22,7 +20,6 @@ function Footer() {
           </ul>
         </nav>
 
-        {/* 3열: Contact */}
         <div className="footer-contact">
           <h3 className="footer-title">Contact</h3>
           <ul className="footer-list">
@@ -32,7 +29,6 @@ function Footer() {
           </ul>
         </div>
 
-        {/* 4열: Social */}
         <div className="footer-social">
           <h3 className="footer-title">Social Media Links</h3>
           <ul className="footer-list">
@@ -45,5 +41,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;

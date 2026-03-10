@@ -33,7 +33,7 @@ export function initializeTimes() {
   return fetchAPI(today)
 }
 
-function Main() {
+export default function Main() {
   const navigate = useNavigate();
 
   const [availableTimes , dispatch ] =useReducer(updateTimes, [] , initializeTimes)
@@ -61,5 +61,3 @@ function Main() {
     </main>
   );
 }
-
-export default Main;

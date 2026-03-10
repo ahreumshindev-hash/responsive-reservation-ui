@@ -5,7 +5,7 @@ const testimonials = [
   { name: "Alex", role: "Visitor", rating: "★★★★★", quote: "Easy to reserve a table on mobile.", color:"#333333", text:"#fff"},
 ];
 
-function CustomersSay() {
+export default function CustomersSay() {
   return (
       <section className="testimonials">
             <h2 className="section-title">Testimonials</h2>
@@ -36,5 +36,3 @@ function CustomersSay() {
         </section>
   );
 }
-
-export default CustomersSay;

@@ -24,7 +24,7 @@ const specials = [
 ];
 
 
-function Specials() {
+export default function Specials() {
   return (
     <section className="section">
       <div className="container">
@@ -52,5 +52,3 @@ function Specials() {
     </section>
   );
 }
-
-export default Specials;

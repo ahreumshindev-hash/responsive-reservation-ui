@@ -1,13 +1,11 @@
 import Nav from './Nav'
 
-function Header() {
+export default function Header() {
   return (
     <header>
         <div className='container'>
-        <Nav/>
+          <Nav/>
         </div>
     </header>
   );
 }
-
-export default Header;
